@@ -1,0 +1,36 @@
+nav{
+    color:blue;
+    text-color:yellow;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+P.blocktext {
+    margin-right: auto;
+    width: 20em
+
+}
+
+body {
+background-image: url("Images/Vogons.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center right;
+
+
+}
+
+label{
+text-color: red
+}
+
+input{
+align="right"
+}

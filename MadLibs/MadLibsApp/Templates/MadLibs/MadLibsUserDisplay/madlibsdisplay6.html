@@ -1,0 +1,46 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Movie Qoutes</td>
+    </tr>
+    <tr>
+        <td>
+             <P class="blocktext" style="text-alight: left">
+
+                   "Toto, I've got a feeling we're not in {{ madlibs.Place }} anymore."
+
+                    "May the {{ madlibs.Thing }} be with you."
+
+                    "Frankly, my dear, I don't give a {{ madlibs.noun }}."
+
+                    "I'm gonna {{ madlibs.Adjective }} him an {{ madlibs.Thing }} he can't refuse."
+
+                    "One morning I {{ madlibs.Adjective }} an {{ madlibs.Thing }} in my pajamas.  How he got in
+                 my pajamas, I don't know"
+
+                Noun: {{ madlibs.noun }}
+                Noun2: {{ madlibs.noun2 }}
+                Noun3: {{ madlibs.noun3 }}
+                Person: {{ madlibs.Person }}
+                Place: {{ madlibs.Place }}
+                Thing: {{ madlibs.Thing }}
+                Adjective: {{ madlibs.Adjective }}
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>

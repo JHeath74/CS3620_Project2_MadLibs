@@ -1,0 +1,39 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Children's Stories</td>
+    </tr>
+    <tr>
+        <td>
+             <P class="blocktext" style="text-alight: left">
+
+
+                 Once upon a time there lived a poor widow and her son {{ madlibs.Person }}.
+                 One day, {{ madlibs.Person }}’s mother told him to sell their only cow.
+                 {{ madlibs.Person }} went to the {{ madlibs.noun3 }} and on the way he met a man who wanted to buy his cow.
+                 {{ madlibs.Person }} asked, “What will you give me in return for my cow?”
+                 The man answered, “I will give you five magic {{ madlibs.noun3 }}!”
+                 {{ madlibs.Person }} took the magic {{ madlibs.noun3 }} and gave the man the cow.
+                 But when he reached home, {{ madlibs.Person }}’s mother was very angry.
+                 She said, “You fool! He took away your cow and gave you some beans!”
+                 She {{ madlibs.Adjective }} the beans out of the window.
+                 {{ madlibs.Person }} was very sad and {{ madlibs.Adjective }} to sleep without {{ madlibs.Thing }}.
+
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

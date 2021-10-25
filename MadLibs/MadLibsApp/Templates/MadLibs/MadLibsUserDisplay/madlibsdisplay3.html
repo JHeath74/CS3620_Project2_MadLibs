@@ -1,0 +1,32 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Poem</td>
+    </tr>
+    <tr>
+        <td>
+             <p>
+
+                 {{ madlibs.noun }} have a little shadow that {{ madlibs.Adjective }} in and out with me,
+                 And what can be the use of {{ madlibs.Adjective }} is more than I can see.
+                 He is very, very like me from the {{ madlibs.Thing }} up to the head;
+                 And I see him Noun3: {{ madlibs.noun3 }} before me, when I {{ madlibs.noun2 }} into my bed.
+
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

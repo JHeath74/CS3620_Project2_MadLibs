@@ -1,0 +1,48 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Dr. Suess Story</td>
+    </tr>
+    <tr>
+        <td>
+             <P class="blocktext" style="text-alight: left">
+
+                   The {{ madlibs.Thing }} did not {{ madlibs.Adjective }}.
+                 It was too {{ madlibs.Adjective }} to {{ madlibs.Thing }}.
+                 So we sat in the Noun: {{ madlibs.noun }}
+                 All that {{ madlibs.noun2 }}, cold, {{ madlibs.noun3 }} day.
+
+                 I saw there with {{ madlibs.Person }}.
+                 We sat there, we two.
+                 And I said, "How I wish We had {{ madlibs.Adjective }} to do!"
+
+                 Too {{ madlibs.noun3 }} to go {{ madlibs.Place }}
+                 And too cold to play {{ madlibs.noun2 }}.
+                 So we sat in the {{ madlibs.noun3 }}.
+                 We did {{ madlibs.noun }} at all.
+
+                Noun: {{ madlibs.noun }}
+                Noun2: {{ madlibs.noun2 }}
+                Noun3: {{ madlibs.noun3 }}
+                Person: {{ madlibs.Person }}
+                Place: {{ madlibs.Place }}
+                Thing: {{ madlibs.Thing }}
+                Adjective: {{ madlibs.Adjective }}
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

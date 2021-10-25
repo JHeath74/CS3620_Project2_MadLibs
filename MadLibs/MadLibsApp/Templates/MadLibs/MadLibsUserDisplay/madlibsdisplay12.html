@@ -1,0 +1,60 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Children's Stories</td>
+    </tr>
+    <tr>
+        <td>
+             <P class="blocktext" style="text-alight: left">
+
+                Once upon a time there was reindeer named {{ madlibs.Person }}. He lived in Antarctica and
+                 desperately wanted to work for Santa at the North Pole. His friends, {{ madlibs.noun }} and
+                 {{ madlibs.noun2 }}, became tired of his whining and encouraged him to write Santa a letter.
+                 It went like this:
+
+                 Dear Santa,
+                    My name is {{ madlibs.Person }} and I am a great admirer of yours.
+                 I am very good at {{ madlibs.Thing }} and am willing to work for you.
+
+                Sincerely yours,
+                     {{ madlibs.Person }}
+
+                When Santa received his letter he was quite {{ madlibs.noun3 }}, but he didn't need another reindeer.
+                Poor {{ madlibs.Person }} was so sad when he received Santa's letter that he decided not to
+                 celebrate {{ madlibs.Place }}.
+
+                On Christmas Eve {{ madlibs.Person }} went to bed early. His whole house was in darkness.
+                 Santa had trouble finding his house that night.
+
+                When Santa entered {{ madlibs.Person }}'s house he didn't see the usual assortment of
+                 {{ madlibs.Thing }} decorating the mantle piece. Just then Santa heard Vixen coughing and sneezing.
+                 Santa rushed out and asked Vixen if he was all right. "No," he replied.
+
+                "Well, what am I going to do now?" thought Santa, "I can't fly with only 7 reindeer!"
+
+                Then he remembered he was at {{ madlibs.Person }}'s house. So Santa rushed in the house
+                 and woke him up and asked him if he wanted to help fly the sleigh.
+                 Boy was {{ madlibs.Person }} excited! He quickly agreed and Santa was able to accomplish
+                 all of his deliveries.
+
+                Best of all, {{ madlibs.Person }} was hired to work as a {{ madlibs.Thing }} for Santa at the
+                 North Pole. It turned out to be {{ madlibs.Person }}'s best Christmas ever.
+
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

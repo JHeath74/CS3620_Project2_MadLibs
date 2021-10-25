@@ -1,0 +1,36 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Children's Stories</td>
+    </tr>
+    <tr>
+        <td>
+             <P class="blocktext" style="text-alight: left">
+
+
+
+                Noun: {{ madlibs.noun }}
+                Noun2: {{ madlibs.noun2 }}
+                Noun3: {{ madlibs.noun3 }}
+                Person: {{ madlibs.Person }}
+                Place: {{ madlibs.Place }}
+                Thing: {{ madlibs.Thing }}
+                Adjective: {{ madlibs.Adjective }}
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

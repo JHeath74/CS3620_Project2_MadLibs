@@ -1,0 +1,46 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Qoutes</td>
+    </tr>
+    <tr>
+        <td>
+             <p>
+                {{ madlibs.Adjective }}, not what your {{ madlibs.Thing }} can do for you,  but what you can do for
+                 your {{ madlibs.Thing }}. - John F. Kennedy
+
+                 A {{ madlibs.Thing }} spent {{ madlibs.Adjective }} Noun: {{ madlibs.noun }} is not only
+                 more honorable, but more useful than a life spent doing nothing.” — George Bernhard Shaw.
+
+                 {{ madlibs.Thing }} is what {{ madlibs.Adjective }} when you're busy making other {{ madlibs.noun2 }}.
+                 -John Lennon
+
+                 When you {{ madlibs.Adjective }} the end of your rope, {{ madlibs.Adjective }} a {{ madlibs.Thing }}
+                 in it and hang on. -Franklin D. Roosevelt
+
+                 Always {{ madlibs.Adjective }} that you are absolutely Thing: {{ madlibs.Thing }}.
+                 Just like {{ madlibs.Person }} else. -Margaret Mead
+
+                 {{ madlibs.Adjective }} {{ madlibs.Place }} and I forget.
+                 Teach me and I { madlibs.noun3 }}.
+                 Involve me and I Noun2: {{ madlibs.noun2 }}. -Benjamin Franklin
+
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>

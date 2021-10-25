@@ -1,0 +1,42 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Your Favorite Children's Hymns</td>
+    </tr>
+    <tr>
+        <td>
+             <p>
+                {{ madlibs.Person }} looked out the {{ madlibs.Thing }}, and what did I see?
+                {{ madlibs.Thing }} {{ madlibs.Adjective }} on the {{ madlibs.noun2 }} tree!
+                {{ madlibs.Person }} had brought me such a nice surprise,
+                Blossoms {{ madlibs.Adjective }} right before my eyes.
+                I could take an armful and make a treat,
+                A popcorn ball that would {{ madlibs.Adjective }} so {{ madlibs.noun3 }}.
+                It wasn’t really so, but it seemed to be
+                Popcorn {{ madlibs.Adjective }} on the {{ madlibs.noun2 }} tree.
+
+                Noun: {{ madlibs.noun }}
+                Noun2: {{ madlibs.noun2 }}
+                Noun3: {{ madlibs.noun3 }}
+                Person: {{ madlibs.Person }}
+                Place: {{ madlibs.Place }}
+                Thing: {{ madlibs.Thing }}
+                Adjective: {{ madlibs.Adjective }}
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Children's Stories</td>
+    </tr>
+    <tr>
+        <td>
+             <P class="blocktext" style="text-alight: left">
+
+
+                ONCE upon a time there were four little {{ madlibs.noun }}, and their names were—
+                Flopsy, Mopsy, Cotton-tail, and Peter.
+
+                They lived with their Mother in a {{ madlibs.Place }}, underneath the root of a
+                 very big fir {{ madlibs.Thing }}.
+
+                "NOW, my dears," said old Mrs. {{ madlibs.noun }} one morning, "you may {{ madlibs.Adjective }}
+                 into the fields or down the lane, but don't go into Mr. {{ madlibs.Person }}'s garden:
+                 your Father had an accident there; he was put in a pie by Mrs. {{ madlibs.Person }}."
+
+
+                Noun: {{ madlibs.noun }}
+                Noun2: {{ madlibs.noun2 }}
+                Noun3: {{ madlibs.noun3 }}
+                Person: {{ madlibs.Person }}
+                Place: {{ madlibs.Place }}
+                Thing: {{ madlibs.Thing }}
+                Adjective: {{ madlibs.Adjective }}
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

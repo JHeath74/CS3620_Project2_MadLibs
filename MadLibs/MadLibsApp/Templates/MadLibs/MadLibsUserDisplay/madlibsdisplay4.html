@@ -1,0 +1,47 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Poem</td>
+    </tr>
+    <tr>
+        <td>
+             <P class="blocktext" style="text-alight: left">
+
+                    “And as to being in a fright,
+                    Allow me to remark
+                    That {{ madlibs.Person }} have just as good a right
+                    In every way, to fear the {{ madlibs.Thing }},
+                    As Men to fear the dark.”
+
+                    “No plea,” said I, “can well excuse
+                    Such cowardice in you:
+                    {{ madlibs.noun }} can visit when they {{ madlibs.Adjective }},
+                    Whereas we{{ madlibs.noun2 }} can’t refuse
+                    To grant the {{ madlibs.noun3 }}.”
+
+                Noun: {{ madlibs.noun }}
+                Noun2: {{ madlibs.noun2 }}
+                Noun3: {{ madlibs.noun3 }}
+                Person: {{ madlibs.Person }}
+                Place: {{ madlibs.Place }}
+                Thing: {{ madlibs.Thing }}
+                Adjective: {{ madlibs.Adjective }}
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Lib</title>
+</head>
+<body>
+{% block body %}
+{% for madlib in madlibs %}
+<table>
+    <tr>
+        <td>Children's Stories</td>
+    </tr>
+    <tr>
+        <td>
+             <P class="blocktext" style="text-alight: left">
+
+                Today I went to my favorite {{ madlibs.Thing }} called the {{ madlibs.noun }} {{ madlibs.Place }}.
+                 Unlike most {{ madlibs.noun2 }} stands, they cook and prepare the food in a hut while you
+                 {{ madlibs.Adjective }}.
+                 The best thing on the menu is the {{ madlibs.Thing }}.
+                 Instead of ground beef they fill the taco with {{ madlibs.noun2 }}, cheese, and top it off
+                 with a salsa made from {{ madlibs.noun3 }}.
+                 If that doesn't make your mouth water, then it' just like {{ madlibs.Thing }} always
+                 says: {{ madlibs.noun }}!
+
+            </p>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>

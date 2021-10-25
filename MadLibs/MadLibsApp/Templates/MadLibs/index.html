@@ -1,0 +1,19 @@
+{% extends 'MadLibs/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Madlibs</title>
+</head>
+<body>
+{% block body %}
+
+<P class="blocktext" style="text-alight: left">
+    Welcome to some truly horrible poetry,  unless you are a Vogon.  So sitback,  relax and have some fun!
+    Remember, this is your chance to remake famous qoutes, stories and songs.
+</P>
+<button><a href="{% url 'MadLibsApp:madlibuserinput' %}" class="nav-item nav-link">Enjoy a new Mad Lib</a></button>
+{% endblock %}
+</body>
+</html>
